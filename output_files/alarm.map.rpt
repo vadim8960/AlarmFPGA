@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alarm
-Tue Aug 13 21:16:25 2024
+Wed Aug 14 11:54:43 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -48,13 +48,13 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Aug 13 21:16:25 2024           ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 14 11:54:43 2024           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                      ; alarm                                           ;
 ; Top-level Entity Name              ; alarm                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 151                                             ;
-;     Total combinational functions  ; 151                                             ;
+; Total logic elements               ; 140                                             ;
+;     Total combinational functions  ; 140                                             ;
 ;     Dedicated logic registers      ; 67                                              ;
 ; Total registers                    ; 67                                              ;
 ; Total pins                         ; 16                                              ;
@@ -182,17 +182,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 151       ;
+; Estimated Total logic elements              ; 140       ;
 ;                                             ;           ;
-; Total combinational functions               ; 151       ;
+; Total combinational functions               ; 140       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 44        ;
-;     -- 3 input functions                    ; 9         ;
-;     -- <=2 input functions                  ; 98        ;
+;     -- 4 input functions                    ; 38        ;
+;     -- 3 input functions                    ; 6         ;
+;     -- <=2 input functions                  ; 96        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 109       ;
-;     -- arithmetic mode                      ; 42        ;
+;     -- normal mode                          ; 95        ;
+;     -- arithmetic mode                      ; 45        ;
 ;                                             ;           ;
 ; Total registers                             ; 67        ;
 ;     -- Dedicated logic registers            ; 67        ;
@@ -204,8 +204,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 67        ;
-; Total fan-out                               ; 619       ;
-; Average fan-out                             ; 2.48      ;
+; Total fan-out                               ; 589       ;
+; Average fan-out                             ; 2.46      ;
 +---------------------------------------------+-----------+
 
 
@@ -214,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |alarm                     ; 151 (151)           ; 67 (67)                   ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |alarm              ; alarm       ; work         ;
+; |alarm                     ; 140 (140)           ; 67 (67)                   ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |alarm              ; alarm       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -224,14 +224,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
+; seg[0]~reg0                            ; Stuck at VCC due to stuck port data_in ;
 ; dig[1]~reg0                            ; Stuck at VCC due to stuck port data_in ;
 ; dig[0]~reg0                            ; Stuck at VCC due to stuck port data_in ;
-; seg[0]~reg0                            ; Stuck at VCC due to stuck port data_in ;
 ; systicks1_[28..31]                     ; Stuck at GND due to stuck port data_in ;
 ; systicks2_[28..31]                     ; Stuck at GND due to stuck port data_in ;
 ; systicks1_[26,27]                      ; Stuck at GND due to stuck port data_in ;
-; systicks2_[16..27]                     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 25 ;                                        ;
+; systicks2_[19..27]                     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 22 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -240,9 +240,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+---------------------------+---------------------------------------------------------------------------------+
 ; Register name  ; Reason for Removal        ; Registers Removed due to This Register                                          ;
 +----------------+---------------------------+---------------------------------------------------------------------------------+
-; systicks2_[31] ; Stuck at GND              ; systicks2_[27], systicks2_[26], systicks2_[25], systicks2_[16], systicks2_[17], ;
-;                ; due to stuck port data_in ; systicks2_[18], systicks2_[19], systicks2_[20], systicks2_[21], systicks2_[22], ;
-;                ;                           ; systicks2_[23], systicks2_[24]                                                  ;
+; systicks2_[31] ; Stuck at GND              ; systicks2_[27], systicks2_[26], systicks2_[25], systicks2_[19], systicks2_[20], ;
+;                ; due to stuck port data_in ; systicks2_[21], systicks2_[22], systicks2_[23], systicks2_[24]                  ;
 ; systicks1_[31] ; Stuck at GND              ; systicks1_[27], systicks1_[26]                                                  ;
 ;                ; due to stuck port data_in ;                                                                                 ;
 +----------------+---------------------------+---------------------------------------------------------------------------------+
@@ -256,9 +255,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 67    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Clear ; 53    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -268,7 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; dig[2]~reg0                            ; 12      ;
+; dig[2]~reg0                            ; 10      ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -278,9 +277,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |alarm|val_ed_             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |alarm|val_des_            ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |alarm|Selector3           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |alarm|Selector2           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -291,21 +288,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
 ; cycloneiii_ff         ; 67                          ;
-;     CLR               ; 42                          ;
-;     ENA               ; 24                          ;
+;     CLR               ; 45                          ;
+;     ENA               ; 13                          ;
+;     ENA CLR           ; 8                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 154                         ;
-;     arith             ; 42                          ;
-;         2 data inputs ; 42                          ;
-;     normal            ; 112                         ;
+; cycloneiii_lcell_comb ; 143                         ;
+;     arith             ; 45                          ;
+;         2 data inputs ; 45                          ;
+;     normal            ; 98                          ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 52                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 44                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 46                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 38                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.60                       ;
-; Average LUT depth     ; 9.02                        ;
+; Max LUT depth         ; 9.60                        ;
+; Average LUT depth     ; 6.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -324,33 +322,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Tue Aug 13 21:16:16 2024
+    Info: Processing started: Wed Aug 14 11:54:35 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alarm -c alarm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alarm.v
     Info (12023): Found entity 1: alarm File: C:/progs/fpga/alarm/alarm.v Line: 1
 Info (12127): Elaborating entity "alarm" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at alarm.v(50): truncated value with size 32 to match size of target (5) File: C:/progs/fpga/alarm/alarm.v Line: 50
-Warning (10230): Verilog HDL assignment warning at alarm.v(53): truncated value with size 32 to match size of target (5) File: C:/progs/fpga/alarm/alarm.v Line: 53
 Warning (10034): Output port "buzz" at alarm.v(5) has no driver File: C:/progs/fpga/alarm/alarm.v Line: 5
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "buzz" is stuck at GND File: C:/progs/fpga/alarm/alarm.v Line: 5
-    Warning (13410): Pin "seg[0]" is stuck at VCC File: C:/progs/fpga/alarm/alarm.v Line: 43
-    Warning (13410): Pin "dig[0]" is stuck at VCC File: C:/progs/fpga/alarm/alarm.v Line: 43
-    Warning (13410): Pin "dig[1]" is stuck at VCC File: C:/progs/fpga/alarm/alarm.v Line: 43
+    Warning (13410): Pin "seg[0]" is stuck at VCC File: C:/progs/fpga/alarm/alarm.v Line: 57
+    Warning (13410): Pin "dig[0]" is stuck at VCC File: C:/progs/fpga/alarm/alarm.v Line: 57
+    Warning (13410): Pin "dig[1]" is stuck at VCC File: C:/progs/fpga/alarm/alarm.v Line: 57
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/progs/fpga/alarm/output_files/alarm.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 182 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 162 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 166 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Tue Aug 13 21:16:25 2024
-    Info: Elapsed time: 00:00:09
+    Info (21061): Implemented 146 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Wed Aug 14 11:54:43 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:06
 
 

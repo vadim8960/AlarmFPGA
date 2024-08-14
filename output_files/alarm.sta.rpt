@@ -1,5 +1,5 @@
 Timing Analyzer report for alarm
-Tue Aug 13 21:16:33 2024
+Wed Aug 14 11:54:51 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -99,13 +99,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.9%      ;
-;     Processors 3-4         ;   0.6%      ;
+;     Processors 2-4         ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -123,7 +122,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 100.57 MHz ; 100.57 MHz      ; clk        ;      ;
+; 120.53 MHz ; 120.53 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -139,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; clk   ; -8.943 ; -436.897           ;
+; clk   ; -7.297 ; -408.828           ;
 +-------+--------+--------------------+
 
 
@@ -148,7 +147,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.435 ; 0.000              ;
+; clk   ; 0.432 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -178,106 +177,106 @@ No paths to report.
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; -8.943 ; systicks1_[1]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.340     ;
-; -8.940 ; systicks1_[1]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.337     ;
-; -8.939 ; systicks1_[1]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.336     ;
-; -8.938 ; systicks1_[1]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.335     ;
-; -8.936 ; systicks1_[1]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.407      ; 10.344     ;
-; -8.931 ; systicks1_[1]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.328     ;
-; -8.835 ; systicks1_[1]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.232     ;
-; -8.833 ; systicks1_[3]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.230     ;
-; -8.832 ; systicks1_[0]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.230     ;
-; -8.830 ; systicks1_[3]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.227     ;
-; -8.829 ; systicks1_[0]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.227     ;
-; -8.829 ; systicks1_[3]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.226     ;
-; -8.828 ; systicks1_[0]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.226     ;
-; -8.828 ; systicks1_[3]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.225     ;
-; -8.827 ; systicks1_[0]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.225     ;
-; -8.826 ; systicks1_[3]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.407      ; 10.234     ;
-; -8.825 ; systicks1_[0]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 10.234     ;
-; -8.821 ; systicks1_[3]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.218     ;
-; -8.820 ; systicks1_[0]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.218     ;
-; -8.725 ; systicks1_[3]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.122     ;
-; -8.724 ; systicks1_[0]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.122     ;
-; -8.697 ; systicks1_[2]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.095     ;
-; -8.694 ; systicks1_[2]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.092     ;
-; -8.693 ; systicks1_[2]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.091     ;
-; -8.692 ; systicks1_[2]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.090     ;
-; -8.690 ; systicks1_[2]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 10.099     ;
-; -8.689 ; systicks1_[5]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.086     ;
-; -8.686 ; systicks1_[5]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.083     ;
-; -8.685 ; systicks1_[5]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.082     ;
-; -8.685 ; systicks1_[2]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 10.083     ;
-; -8.684 ; systicks1_[5]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.081     ;
-; -8.682 ; systicks1_[5]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.407      ; 10.090     ;
-; -8.677 ; systicks1_[5]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 10.074     ;
-; -8.589 ; systicks1_[2]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.987      ;
-; -8.581 ; systicks1_[5]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.978      ;
-; -8.406 ; systicks1_[6]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.804      ;
-; -8.403 ; systicks1_[6]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.801      ;
-; -8.402 ; systicks1_[6]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.800      ;
-; -8.401 ; systicks1_[6]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.799      ;
-; -8.399 ; systicks1_[6]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 9.808      ;
-; -8.394 ; systicks1_[6]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.792      ;
-; -8.389 ; systicks1_[4]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.787      ;
-; -8.386 ; systicks1_[4]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.784      ;
-; -8.385 ; systicks1_[4]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.783      ;
-; -8.384 ; systicks1_[4]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.782      ;
-; -8.382 ; systicks1_[4]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 9.791      ;
-; -8.377 ; systicks1_[4]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.775      ;
-; -8.342 ; systicks1_[7]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.740      ;
-; -8.339 ; systicks1_[7]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.737      ;
-; -8.338 ; systicks1_[7]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.736      ;
-; -8.337 ; systicks1_[7]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.735      ;
-; -8.335 ; systicks1_[7]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 9.744      ;
-; -8.330 ; systicks1_[7]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.728      ;
-; -8.298 ; systicks1_[6]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.696      ;
-; -8.281 ; systicks1_[4]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.679      ;
-; -8.234 ; systicks1_[7]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.632      ;
-; -8.214 ; systicks1_[11] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.611      ;
-; -8.211 ; systicks1_[11] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.608      ;
-; -8.210 ; systicks1_[11] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.607      ;
-; -8.209 ; systicks1_[11] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.606      ;
-; -8.207 ; systicks1_[11] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.407      ; 9.615      ;
-; -8.202 ; systicks1_[11] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.599      ;
-; -8.194 ; systicks1_[9]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.592      ;
-; -8.191 ; systicks1_[9]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.589      ;
-; -8.190 ; systicks1_[9]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.588      ;
-; -8.189 ; systicks1_[9]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.587      ;
-; -8.187 ; systicks1_[9]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 9.596      ;
-; -8.182 ; systicks1_[9]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.580      ;
-; -8.149 ; systicks1_[10] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.546      ;
-; -8.146 ; systicks1_[10] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.543      ;
-; -8.145 ; systicks1_[10] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.542      ;
-; -8.144 ; systicks1_[10] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.541      ;
-; -8.142 ; systicks1_[10] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.407      ; 9.550      ;
-; -8.137 ; systicks1_[10] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.534      ;
-; -8.106 ; systicks1_[11] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.503      ;
-; -8.099 ; systicks1_[8]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.497      ;
-; -8.096 ; systicks1_[8]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.494      ;
-; -8.095 ; systicks1_[8]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.493      ;
-; -8.094 ; systicks1_[8]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.492      ;
-; -8.092 ; systicks1_[8]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 9.501      ;
-; -8.090 ; systicks1_[1]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.077     ; 9.014      ;
-; -8.089 ; systicks1_[1]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.077     ; 9.013      ;
-; -8.087 ; systicks1_[8]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.485      ;
-; -8.086 ; systicks1_[9]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.484      ;
-; -8.041 ; systicks1_[10] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.396      ; 9.438      ;
-; -7.994 ; systicks1_[1]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.077     ; 8.918      ;
-; -7.991 ; systicks1_[8]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.389      ;
-; -7.980 ; systicks1_[3]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.077     ; 8.904      ;
-; -7.979 ; systicks1_[0]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.076     ; 8.904      ;
-; -7.979 ; systicks1_[3]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.077     ; 8.903      ;
-; -7.978 ; systicks1_[0]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.076     ; 8.903      ;
-; -7.969 ; systicks1_[12] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.367      ;
-; -7.966 ; systicks1_[12] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.364      ;
-; -7.965 ; systicks1_[12] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.363      ;
-; -7.964 ; systicks1_[12] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.362      ;
-; -7.962 ; systicks1_[12] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.408      ; 9.371      ;
-; -7.957 ; systicks1_[12] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.355      ;
-; -7.884 ; systicks1_[3]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.077     ; 8.808      ;
-; -7.883 ; systicks1_[0]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.076     ; 8.808      ;
-; -7.861 ; systicks1_[12] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.259      ;
+; -7.297 ; systicks1_[0]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.081     ; 8.217      ;
+; -6.981 ; systicks1_[0]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.087     ; 7.895      ;
+; -6.981 ; systicks1_[0]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.087     ; 7.895      ;
+; -6.980 ; systicks1_[0]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.087     ; 7.894      ;
+; -6.852 ; systicks1_[1]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.075     ; 7.778      ;
+; -6.714 ; systicks1_[5]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.076     ; 7.639      ;
+; -6.707 ; systicks1_[3]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.075     ; 7.633      ;
+; -6.658 ; systicks1_[0]  ; systicks1_[6]     ; clk          ; clk         ; 1.000        ; -0.086     ; 7.573      ;
+; -6.657 ; systicks1_[0]  ; systicks1_[11]    ; clk          ; clk         ; 1.000        ; -0.086     ; 7.572      ;
+; -6.655 ; systicks1_[0]  ; systicks1_[4]     ; clk          ; clk         ; 1.000        ; -0.086     ; 7.570      ;
+; -6.653 ; systicks1_[0]  ; systicks1_[8]     ; clk          ; clk         ; 1.000        ; -0.086     ; 7.568      ;
+; -6.652 ; systicks1_[0]  ; systicks1_[5]     ; clk          ; clk         ; 1.000        ; -0.086     ; 7.567      ;
+; -6.649 ; systicks1_[0]  ; systicks1_[9]     ; clk          ; clk         ; 1.000        ; -0.086     ; 7.564      ;
+; -6.647 ; systicks1_[0]  ; systicks1_[10]    ; clk          ; clk         ; 1.000        ; -0.086     ; 7.562      ;
+; -6.646 ; systicks1_[0]  ; systicks1_[7]     ; clk          ; clk         ; 1.000        ; -0.086     ; 7.561      ;
+; -6.623 ; systicks1_[4]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.076     ; 7.548      ;
+; -6.608 ; systicks1_[2]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.075     ; 7.534      ;
+; -6.598 ; systicks1_[7]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.076     ; 7.523      ;
+; -6.557 ; systicks1_[0]  ; systicks1_[23]    ; clk          ; clk         ; 1.000        ; 0.387      ; 7.945      ;
+; -6.556 ; systicks1_[0]  ; systicks1_[18]    ; clk          ; clk         ; 1.000        ; 0.387      ; 7.944      ;
+; -6.555 ; systicks1_[0]  ; systicks1_[13]    ; clk          ; clk         ; 1.000        ; 0.387      ; 7.943      ;
+; -6.555 ; systicks1_[0]  ; systicks1_[17]    ; clk          ; clk         ; 1.000        ; 0.387      ; 7.943      ;
+; -6.551 ; systicks1_[0]  ; systicks1_[20]    ; clk          ; clk         ; 1.000        ; 0.387      ; 7.939      ;
+; -6.551 ; systicks1_[0]  ; systicks1_[21]    ; clk          ; clk         ; 1.000        ; 0.387      ; 7.939      ;
+; -6.544 ; systicks1_[13] ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.569     ; 6.976      ;
+; -6.536 ; systicks1_[1]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.081     ; 7.456      ;
+; -6.536 ; systicks1_[1]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.081     ; 7.456      ;
+; -6.535 ; systicks1_[1]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.081     ; 7.455      ;
+; -6.528 ; systicks2_[1]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.528 ; systicks2_[1]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.446      ;
+; -6.516 ; systicks1_[6]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.076     ; 7.441      ;
+; -6.495 ; systicks1_[0]  ; val_des_[1]       ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.495 ; systicks1_[0]  ; val_des_[3]       ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.495 ; systicks1_[0]  ; val_des_[2]       ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.495 ; systicks1_[0]  ; val_des_[0]       ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.495 ; systicks1_[0]  ; val_ed_[3]        ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.495 ; systicks1_[0]  ; val_ed_[2]        ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.495 ; systicks1_[0]  ; val_ed_[1]        ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.495 ; systicks1_[0]  ; val_ed_[0]        ; clk          ; clk         ; 1.000        ; 0.359      ; 7.855      ;
+; -6.440 ; systicks1_[0]  ; led_debug~reg0    ; clk          ; clk         ; 1.000        ; 0.407      ; 7.848      ;
+; -6.434 ; systicks1_[0]  ; systicks1_[22]    ; clk          ; clk         ; 1.000        ; 0.407      ; 7.842      ;
+; -6.430 ; systicks2_[0]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.430 ; systicks2_[0]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.083     ; 7.348      ;
+; -6.428 ; systicks2_[4]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.428 ; systicks2_[4]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.345      ;
+; -6.422 ; systicks1_[9]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.076     ; 7.347      ;
+; -6.398 ; systicks1_[5]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.082     ; 7.317      ;
+; -6.398 ; systicks1_[5]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.082     ; 7.317      ;
+; -6.397 ; systicks1_[5]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.082     ; 7.316      ;
+; -6.391 ; systicks1_[3]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.081     ; 7.311      ;
+; -6.391 ; systicks1_[3]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.081     ; 7.311      ;
+; -6.390 ; systicks1_[3]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.081     ; 7.310      ;
+; -6.386 ; systicks2_[3]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.386 ; systicks2_[3]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.084     ; 7.303      ;
+; -6.368 ; systicks1_[8]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.076     ; 7.293      ;
+; -6.362 ; systicks1_[0]  ; systicks1_[19]    ; clk          ; clk         ; 1.000        ; -0.073     ; 7.290      ;
+; -6.353 ; systicks1_[0]  ; systicks1_[15]    ; clk          ; clk         ; 1.000        ; -0.073     ; 7.281      ;
+; -6.313 ; systicks1_[12] ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.573     ; 6.741      ;
+; -6.309 ; systicks1_[11] ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.076     ; 7.234      ;
+; -6.307 ; systicks1_[4]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.082     ; 7.226      ;
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -286,106 +285,106 @@ No paths to report.
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.435 ; val_des_[4]       ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.099      ; 0.746      ;
-; 0.435 ; val_ed_[4]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 0.746      ;
-; 0.435 ; val_ed_[1]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.099      ; 0.746      ;
-; 0.435 ; val_ed_[2]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.099      ; 0.746      ;
-; 0.435 ; val_ed_[0]        ; val_ed_[0]        ; clk          ; clk         ; 0.000        ; 0.099      ; 0.746      ;
-; 0.436 ; val_des_[1]       ; val_des_[1]       ; clk          ; clk         ; 0.000        ; 0.098      ; 0.746      ;
-; 0.436 ; val_des_[3]       ; val_des_[3]       ; clk          ; clk         ; 0.000        ; 0.098      ; 0.746      ;
-; 0.436 ; val_des_[2]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.098      ; 0.746      ;
-; 0.436 ; val_des_[0]       ; val_des_[0]       ; clk          ; clk         ; 0.000        ; 0.098      ; 0.746      ;
-; 0.454 ; led_debug~reg0    ; led_debug~reg0    ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
-; 0.512 ; dig[3]~reg0       ; dig[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.805      ;
-; 0.512 ; dig[2]~reg0       ; dig[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.805      ;
-; 0.903 ; dig[3]~reg0       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.707      ;
-; 0.947 ; val_ed_[2]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.141      ; 1.300      ;
-; 1.000 ; val_ed_[0]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.311      ;
-; 1.011 ; val_ed_[0]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.322      ;
-; 1.056 ; dig[3]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.860      ;
-; 1.089 ; val_ed_[4]        ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.141      ; 1.442      ;
-; 1.119 ; dig[2]~reg0       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.923      ;
-; 1.119 ; dig[2]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.592      ; 1.923      ;
-; 1.146 ; systicks2_[11]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.439      ;
-; 1.149 ; val_des_[4]       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.141      ; 1.502      ;
-; 1.149 ; systicks1_[13]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.442      ;
-; 1.245 ; val_ed_[1]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.556      ;
-; 1.297 ; dig[2]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.088      ; 1.597      ;
-; 1.345 ; dig[2]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.088      ; 1.645      ;
-; 1.345 ; dig[2]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.088      ; 1.645      ;
-; 1.356 ; val_ed_[2]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.667      ;
-; 1.381 ; systicks2_[1]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.674      ;
-; 1.382 ; systicks2_[5]     ; systicks2_[5]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.675      ;
-; 1.382 ; systicks2_[13]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.675      ;
-; 1.385 ; systicks2_[2]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.678      ;
-; 1.385 ; systicks2_[12]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.678      ;
-; 1.388 ; systicks2_[10]    ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.681      ;
-; 1.389 ; systicks2_[6]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.682      ;
-; 1.390 ; systicks2_[4]     ; systicks2_[4]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.683      ;
-; 1.400 ; systicks2_[14]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.693      ;
-; 1.407 ; systicks2_[8]     ; systicks2_[8]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.700      ;
-; 1.431 ; val_des_[0]       ; val_des_[1]       ; clk          ; clk         ; 0.000        ; 0.098      ; 1.741      ;
-; 1.436 ; systicks2_[0]     ; systicks2_[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.729      ;
-; 1.451 ; systicks1_[7]     ; systicks1_[7]     ; clk          ; clk         ; 0.000        ; 0.080      ; 1.743      ;
-; 1.452 ; systicks1_[4]     ; systicks1_[4]     ; clk          ; clk         ; 0.000        ; 0.080      ; 1.744      ;
-; 1.474 ; val_checkable_[3] ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.767      ;
-; 1.485 ; dig[3]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.592      ; 2.289      ;
-; 1.488 ; val_ed_[4]        ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.099      ; 1.799      ;
-; 1.497 ; systicks2_[10]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.790      ;
-; 1.499 ; dig[3]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.088      ; 1.799      ;
-; 1.500 ; val_ed_[0]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.141      ; 1.853      ;
-; 1.507 ; val_ed_[4]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.818      ;
-; 1.529 ; val_checkable_[4] ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.842      ;
-; 1.529 ; val_des_[1]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.098      ; 1.839      ;
-; 1.541 ; dig[3]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.088      ; 1.841      ;
-; 1.542 ; dig[3]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.088      ; 1.842      ;
-; 1.554 ; val_ed_[0]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.099      ; 1.865      ;
-; 1.577 ; val_ed_[3]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.098      ; 1.887      ;
-; 1.632 ; val_ed_[3]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.118      ; 1.962      ;
-; 1.638 ; systicks2_[8]     ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.931      ;
-; 1.658 ; val_ed_[4]        ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.141      ; 2.011      ;
-; 1.670 ; dig[2]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.463      ;
-; 1.672 ; dig[2]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.465      ;
-; 1.695 ; val_des_[2]       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.160      ; 2.067      ;
-; 1.696 ; val_des_[0]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.098      ; 2.006      ;
-; 1.697 ; dig[2]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.490      ;
-; 1.701 ; dig[2]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.592      ; 2.505      ;
-; 1.706 ; dig[2]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.499      ;
-; 1.708 ; dig[2]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.501      ;
-; 1.723 ; systicks1_[12]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.016      ;
-; 1.729 ; systicks1_[10]    ; systicks1_[10]    ; clk          ; clk         ; 0.000        ; 0.080      ; 2.021      ;
-; 1.731 ; val_des_[4]       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.141      ; 2.084      ;
-; 1.733 ; dig[3]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.526      ;
-; 1.734 ; dig[3]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.527      ;
-; 1.736 ; systicks2_[1]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.029      ;
-; 1.737 ; systicks1_[2]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.030      ;
-; 1.738 ; dig[3]~reg0       ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.531      ;
-; 1.738 ; systicks2_[11]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.031      ;
-; 1.740 ; systicks2_[5]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.033      ;
-; 1.741 ; dig[3]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.534      ;
-; 1.741 ; dig[3]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.534      ;
-; 1.743 ; dig[3]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.581      ; 2.536      ;
-; 1.745 ; val_ed_[1]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.141      ; 2.098      ;
-; 1.753 ; systicks2_[13]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.046      ;
-; 1.755 ; systicks2_[0]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.048      ;
-; 1.756 ; systicks2_[12]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.049      ;
-; 1.756 ; systicks2_[10]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.049      ;
-; 1.757 ; systicks2_[0]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.050      ;
-; 1.758 ; systicks2_[4]     ; systicks2_[5]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.051      ;
-; 1.758 ; systicks2_[2]     ; systicks2_[4]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.051      ;
-; 1.759 ; systicks2_[8]     ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.052      ;
-; 1.759 ; systicks2_[4]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.052      ;
-; 1.759 ; systicks1_[9]     ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.080      ; 2.051      ;
-; 1.771 ; systicks2_[12]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.064      ;
-; 1.777 ; systicks2_[6]     ; systicks2_[8]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.070      ;
-; 1.778 ; systicks2_[6]     ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.071      ;
-; 1.779 ; systicks1_[8]     ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.080      ; 2.071      ;
-; 1.788 ; val_ed_[2]        ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.099      ; 2.099      ;
-; 1.788 ; systicks2_[9]     ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.080      ; 2.080      ;
-; 1.796 ; systicks1_[11]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.079      ; 2.087      ;
-; 1.800 ; val_ed_[2]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.099      ; 2.111      ;
-; 1.804 ; systicks1_[0]     ; systicks1_[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.097      ;
-; 1.808 ; systicks1_[12]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.101      ;
+; 0.432 ; led_debug~reg0    ; led_debug~reg0    ; clk          ; clk         ; 0.000        ; 0.102      ; 0.746      ;
+; 0.434 ; val_ed_[3]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; val_ed_[2]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.434 ; val_ed_[1]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.446 ; val_ed_[0]        ; val_ed_[0]        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.758      ;
+; 0.490 ; val_ed_[2]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.802      ;
+; 0.506 ; val_ed_[0]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.818      ;
+; 0.509 ; val_ed_[0]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.100      ; 0.821      ;
+; 0.766 ; val_ed_[0]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.100      ; 1.078      ;
+; 0.776 ; val_ed_[3]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.100      ; 1.088      ;
+; 0.898 ; val_checkable_[3] ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.192      ;
+; 0.908 ; dig[2]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.202      ;
+; 0.989 ; dig[2]~reg0       ; dig[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.580      ; 1.781      ;
+; 1.056 ; dig[2]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.350      ;
+; 1.097 ; dig[2]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.391      ;
+; 1.103 ; dig[2]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.397      ;
+; 1.286 ; systicks2_[1]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.579      ;
+; 1.287 ; systicks2_[17]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.580      ;
+; 1.302 ; systicks1_[1]     ; systicks1_[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.595      ;
+; 1.305 ; systicks2_[7]     ; systicks2_[7]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.598      ;
+; 1.308 ; systicks2_[9]     ; systicks2_[9]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.601      ;
+; 1.308 ; systicks2_[14]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.601      ;
+; 1.311 ; dig[3]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; -0.397     ; 1.126      ;
+; 1.348 ; val_checkable_[1] ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.642      ;
+; 1.373 ; val_checkable_[2] ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.667      ;
+; 1.376 ; dig[3]~reg0       ; dig[2]~reg0       ; clk          ; clk         ; 0.000        ; -0.397     ; 1.191      ;
+; 1.376 ; dig[3]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; -0.397     ; 1.191      ;
+; 1.382 ; systicks1_[16]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.102      ; 1.696      ;
+; 1.385 ; systicks1_[14]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.102      ; 1.699      ;
+; 1.429 ; systicks2_[15]    ; systicks2_[15]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.722      ;
+; 1.432 ; systicks2_[16]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.725      ;
+; 1.434 ; systicks2_[2]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.727      ;
+; 1.445 ; systicks1_[3]     ; systicks1_[3]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.738      ;
+; 1.446 ; systicks1_[2]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.739      ;
+; 1.446 ; systicks1_[15]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.575      ; 2.233      ;
+; 1.456 ; systicks2_[10]    ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.749      ;
+; 1.472 ; systicks2_[0]     ; systicks2_[0]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.765      ;
+; 1.550 ; dig[2]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.844      ;
+; 1.550 ; dig[2]~reg0       ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.844      ;
+; 1.552 ; dig[2]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.846      ;
+; 1.553 ; dig[2]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.847      ;
+; 1.553 ; dig[2]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.847      ;
+; 1.554 ; dig[2]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.848      ;
+; 1.554 ; dig[2]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.848      ;
+; 1.559 ; dig[3]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; -0.397     ; 1.374      ;
+; 1.599 ; val_checkable_[0] ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.082      ; 1.893      ;
+; 1.600 ; dig[3]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; -0.397     ; 1.415      ;
+; 1.623 ; systicks1_[11]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.578      ; 2.413      ;
+; 1.637 ; systicks1_[11]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.588      ; 2.437      ;
+; 1.637 ; systicks1_[10]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.578      ; 2.427      ;
+; 1.651 ; systicks1_[10]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.588      ; 2.451      ;
+; 1.660 ; systicks2_[0]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.953      ;
+; 1.660 ; systicks2_[16]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.953      ;
+; 1.685 ; systicks1_[12]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.101      ; 1.998      ;
+; 1.703 ; systicks1_[19]    ; systicks1_[19]    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.997      ;
+; 1.705 ; systicks1_[4]     ; systicks1_[4]     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.998      ;
+; 1.707 ; systicks1_[9]     ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.578      ; 2.497      ;
+; 1.711 ; systicks1_[7]     ; systicks1_[7]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.004      ;
+; 1.721 ; systicks1_[9]     ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.588      ; 2.521      ;
+; 1.739 ; val_ed_[1]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.100      ; 2.051      ;
+; 1.752 ; systicks1_[14]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.102      ; 2.066      ;
+; 1.772 ; systicks2_[15]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.065      ;
+; 1.774 ; systicks1_[11]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.588      ; 2.574      ;
+; 1.776 ; systicks1_[19]    ; systicks1_[21]    ; clk          ; clk         ; 0.000        ; 0.561      ; 2.549      ;
+; 1.777 ; systicks1_[19]    ; systicks1_[20]    ; clk          ; clk         ; 0.000        ; 0.561      ; 2.550      ;
+; 1.780 ; systicks1_[11]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.574      ; 2.566      ;
+; 1.780 ; systicks1_[8]     ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.578      ; 2.570      ;
+; 1.785 ; systicks2_[15]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.078      ;
+; 1.785 ; systicks2_[1]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.078      ;
+; 1.788 ; systicks1_[10]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.588      ; 2.588      ;
+; 1.792 ; systicks2_[7]     ; systicks2_[9]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.085      ;
+; 1.792 ; val_checkable_[3] ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.086      ;
+; 1.793 ; val_checkable_[3] ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.087      ;
+; 1.794 ; systicks1_[8]     ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.588      ; 2.594      ;
+; 1.795 ; val_checkable_[3] ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.089      ;
+; 1.795 ; val_checkable_[3] ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.089      ;
+; 1.795 ; val_checkable_[3] ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.089      ;
+; 1.795 ; val_checkable_[1] ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.089      ;
+; 1.795 ; val_checkable_[1] ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.089      ;
+; 1.797 ; val_checkable_[1] ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.091      ;
+; 1.798 ; systicks1_[1]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.091      ;
+; 1.798 ; val_checkable_[3] ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.092      ;
+; 1.798 ; val_checkable_[3] ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.092      ;
+; 1.798 ; val_checkable_[1] ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.092      ;
+; 1.798 ; val_checkable_[1] ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.092      ;
+; 1.799 ; val_checkable_[1] ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.093      ;
+; 1.799 ; val_checkable_[1] ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.082      ; 2.093      ;
+; 1.802 ; systicks2_[14]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.095      ;
+; 1.803 ; systicks2_[0]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.096      ;
+; 1.804 ; systicks2_[14]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.097      ;
+; 1.805 ; systicks2_[14]    ; systicks2_[15]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.098      ;
+; 1.808 ; systicks2_[9]     ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.101      ;
+; 1.809 ; systicks1_[5]     ; systicks1_[5]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.102      ;
+; 1.814 ; systicks1_[10]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.574      ; 2.600      ;
+; 1.818 ; systicks1_[2]     ; systicks1_[3]     ; clk          ; clk         ; 0.000        ; 0.081      ; 2.111      ;
+; 1.819 ; systicks2_[10]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.112      ;
+; 1.839 ; systicks2_[11]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.132      ;
+; 1.841 ; systicks2_[12]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.134      ;
+; 1.845 ; systicks1_[15]    ; systicks1_[15]    ; clk          ; clk         ; 0.000        ; 0.082      ; 2.139      ;
+; 1.848 ; systicks1_[11]    ; systicks1_[11]    ; clk          ; clk         ; 0.000        ; 0.081      ; 2.141      ;
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -400,7 +399,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 107.02 MHz ; 107.02 MHz      ; clk        ;      ;
+; 129.03 MHz ; 129.03 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -410,7 +409,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -8.344 ; -403.784          ;
+; clk   ; -6.750 ; -379.140          ;
 +-------+--------+-------------------+
 
 
@@ -419,7 +418,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.384 ; 0.000             ;
+; clk   ; 0.382 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -449,106 +448,106 @@ No paths to report.
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; -8.344 ; systicks1_[1]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.724      ;
-; -8.339 ; systicks1_[1]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.719      ;
-; -8.338 ; systicks1_[1]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.718      ;
-; -8.338 ; systicks1_[1]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.718      ;
-; -8.323 ; systicks1_[1]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.703      ;
-; -8.321 ; systicks1_[1]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.384      ; 9.707      ;
-; -8.258 ; systicks1_[0]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.639      ;
-; -8.253 ; systicks1_[0]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.634      ;
-; -8.252 ; systicks1_[0]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.633      ;
-; -8.252 ; systicks1_[0]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.633      ;
-; -8.248 ; systicks1_[3]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.628      ;
-; -8.243 ; systicks1_[3]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.623      ;
-; -8.242 ; systicks1_[3]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.622      ;
-; -8.242 ; systicks1_[3]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.622      ;
-; -8.237 ; systicks1_[1]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.617      ;
-; -8.237 ; systicks1_[0]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.618      ;
-; -8.235 ; systicks1_[0]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 9.622      ;
-; -8.227 ; systicks1_[3]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.607      ;
-; -8.225 ; systicks1_[3]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.384      ; 9.611      ;
-; -8.151 ; systicks1_[0]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.532      ;
-; -8.141 ; systicks1_[3]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.521      ;
-; -8.133 ; systicks1_[2]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.514      ;
-; -8.128 ; systicks1_[2]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.509      ;
-; -8.127 ; systicks1_[2]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.508      ;
-; -8.127 ; systicks1_[2]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.508      ;
-; -8.124 ; systicks1_[5]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.504      ;
-; -8.119 ; systicks1_[5]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.499      ;
-; -8.118 ; systicks1_[5]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.498      ;
-; -8.118 ; systicks1_[5]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.498      ;
-; -8.112 ; systicks1_[2]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.493      ;
-; -8.110 ; systicks1_[2]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 9.497      ;
-; -8.103 ; systicks1_[5]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.483      ;
-; -8.101 ; systicks1_[5]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.384      ; 9.487      ;
-; -8.026 ; systicks1_[2]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.407      ;
-; -8.017 ; systicks1_[5]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.397      ;
-; -7.879 ; systicks1_[6]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.260      ;
-; -7.874 ; systicks1_[6]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.255      ;
-; -7.873 ; systicks1_[6]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.254      ;
-; -7.873 ; systicks1_[6]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.254      ;
-; -7.859 ; systicks1_[4]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.240      ;
-; -7.858 ; systicks1_[6]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.239      ;
-; -7.856 ; systicks1_[6]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 9.243      ;
-; -7.854 ; systicks1_[4]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.235      ;
-; -7.853 ; systicks1_[4]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.234      ;
-; -7.853 ; systicks1_[4]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.234      ;
-; -7.838 ; systicks1_[4]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.219      ;
-; -7.836 ; systicks1_[4]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 9.223      ;
-; -7.825 ; systicks1_[7]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.206      ;
-; -7.820 ; systicks1_[7]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.201      ;
-; -7.819 ; systicks1_[7]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.200      ;
-; -7.819 ; systicks1_[7]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.200      ;
-; -7.804 ; systicks1_[7]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.185      ;
-; -7.802 ; systicks1_[7]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 9.189      ;
-; -7.772 ; systicks1_[6]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.153      ;
-; -7.752 ; systicks1_[4]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.133      ;
-; -7.718 ; systicks1_[7]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.099      ;
-; -7.716 ; systicks1_[11] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.096      ;
-; -7.711 ; systicks1_[11] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.091      ;
-; -7.710 ; systicks1_[11] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.090      ;
-; -7.710 ; systicks1_[11] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.090      ;
-; -7.696 ; systicks1_[9]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.077      ;
-; -7.695 ; systicks1_[11] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.075      ;
-; -7.693 ; systicks1_[11] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.384      ; 9.079      ;
-; -7.691 ; systicks1_[9]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.072      ;
-; -7.690 ; systicks1_[9]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.071      ;
-; -7.690 ; systicks1_[9]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.071      ;
-; -7.689 ; systicks1_[10] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.069      ;
-; -7.684 ; systicks1_[10] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.064      ;
-; -7.683 ; systicks1_[10] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.063      ;
-; -7.683 ; systicks1_[10] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.063      ;
-; -7.675 ; systicks1_[9]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 9.056      ;
-; -7.673 ; systicks1_[9]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 9.060      ;
-; -7.668 ; systicks1_[10] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 9.048      ;
-; -7.666 ; systicks1_[10] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.384      ; 9.052      ;
-; -7.609 ; systicks1_[8]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.990      ;
-; -7.609 ; systicks1_[11] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 8.989      ;
-; -7.604 ; systicks1_[8]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.985      ;
-; -7.603 ; systicks1_[8]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.984      ;
-; -7.603 ; systicks1_[8]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.984      ;
-; -7.589 ; systicks1_[9]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.970      ;
-; -7.588 ; systicks1_[8]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.969      ;
-; -7.586 ; systicks1_[8]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 8.973      ;
-; -7.582 ; systicks1_[10] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.378      ; 8.962      ;
-; -7.525 ; systicks1_[1]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.069     ; 8.458      ;
-; -7.523 ; systicks1_[1]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.069     ; 8.456      ;
-; -7.513 ; systicks1_[12] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.894      ;
-; -7.508 ; systicks1_[12] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.889      ;
-; -7.507 ; systicks1_[12] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.888      ;
-; -7.507 ; systicks1_[12] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.888      ;
-; -7.502 ; systicks1_[8]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.883      ;
-; -7.492 ; systicks1_[12] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.873      ;
-; -7.490 ; systicks1_[12] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.385      ; 8.877      ;
-; -7.439 ; systicks1_[0]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.068     ; 8.373      ;
-; -7.437 ; systicks1_[0]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.068     ; 8.371      ;
-; -7.429 ; systicks1_[3]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.069     ; 8.362      ;
-; -7.427 ; systicks1_[3]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.069     ; 8.360      ;
-; -7.408 ; systicks1_[1]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.069     ; 8.341      ;
-; -7.406 ; systicks1_[12] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.787      ;
-; -7.396 ; systicks1_[14] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.777      ;
-; -7.391 ; systicks1_[14] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.379      ; 8.772      ;
+; -6.750 ; systicks1_[0]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.073     ; 7.679      ;
+; -6.529 ; systicks1_[0]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.078     ; 7.453      ;
+; -6.528 ; systicks1_[0]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.078     ; 7.452      ;
+; -6.528 ; systicks1_[0]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.078     ; 7.452      ;
+; -6.253 ; systicks1_[1]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.067     ; 7.188      ;
+; -6.211 ; systicks1_[0]  ; systicks1_[6]     ; clk          ; clk         ; 1.000        ; -0.077     ; 7.136      ;
+; -6.210 ; systicks1_[0]  ; systicks1_[11]    ; clk          ; clk         ; 1.000        ; -0.077     ; 7.135      ;
+; -6.208 ; systicks1_[0]  ; systicks1_[4]     ; clk          ; clk         ; 1.000        ; -0.077     ; 7.133      ;
+; -6.206 ; systicks1_[0]  ; systicks1_[8]     ; clk          ; clk         ; 1.000        ; -0.077     ; 7.131      ;
+; -6.205 ; systicks1_[0]  ; systicks1_[5]     ; clk          ; clk         ; 1.000        ; -0.077     ; 7.130      ;
+; -6.202 ; systicks1_[0]  ; systicks1_[9]     ; clk          ; clk         ; 1.000        ; -0.077     ; 7.127      ;
+; -6.200 ; systicks1_[0]  ; systicks1_[10]    ; clk          ; clk         ; 1.000        ; -0.077     ; 7.125      ;
+; -6.199 ; systicks1_[0]  ; systicks1_[7]     ; clk          ; clk         ; 1.000        ; -0.077     ; 7.124      ;
+; -6.132 ; systicks1_[5]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.068     ; 7.066      ;
+; -6.129 ; systicks1_[0]  ; systicks1_[23]    ; clk          ; clk         ; 1.000        ; 0.366      ; 7.497      ;
+; -6.128 ; systicks1_[0]  ; systicks1_[18]    ; clk          ; clk         ; 1.000        ; 0.366      ; 7.496      ;
+; -6.128 ; systicks1_[3]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.067     ; 7.063      ;
+; -6.127 ; systicks1_[0]  ; systicks1_[13]    ; clk          ; clk         ; 1.000        ; 0.366      ; 7.495      ;
+; -6.127 ; systicks1_[0]  ; systicks1_[17]    ; clk          ; clk         ; 1.000        ; 0.366      ; 7.495      ;
+; -6.124 ; systicks1_[0]  ; systicks1_[21]    ; clk          ; clk         ; 1.000        ; 0.366      ; 7.492      ;
+; -6.123 ; systicks1_[0]  ; systicks1_[20]    ; clk          ; clk         ; 1.000        ; 0.366      ; 7.491      ;
+; -6.077 ; systicks1_[4]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.068     ; 7.011      ;
+; -6.050 ; systicks1_[0]  ; val_des_[1]       ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.050 ; systicks1_[0]  ; val_des_[3]       ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.050 ; systicks1_[0]  ; val_des_[2]       ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.050 ; systicks1_[0]  ; val_des_[0]       ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.050 ; systicks1_[0]  ; val_ed_[3]        ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.050 ; systicks1_[0]  ; val_ed_[2]        ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.050 ; systicks1_[0]  ; val_ed_[1]        ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.050 ; systicks1_[0]  ; val_ed_[0]        ; clk          ; clk         ; 1.000        ; 0.338      ; 7.390      ;
+; -6.043 ; systicks2_[1]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.043 ; systicks2_[1]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.969      ;
+; -6.038 ; systicks1_[2]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.067     ; 6.973      ;
+; -6.033 ; systicks2_[4]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.033 ; systicks2_[4]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.958      ;
+; -6.032 ; systicks1_[1]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 6.962      ;
+; -6.031 ; systicks1_[1]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 6.961      ;
+; -6.031 ; systicks1_[1]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 6.961      ;
+; -6.030 ; systicks1_[7]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.068     ; 6.964      ;
+; -6.029 ; systicks1_[0]  ; led_debug~reg0    ; clk          ; clk         ; 1.000        ; 0.390      ; 7.421      ;
+; -6.016 ; systicks1_[6]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.068     ; 6.950      ;
+; -6.015 ; systicks1_[0]  ; systicks1_[22]    ; clk          ; clk         ; 1.000        ; 0.390      ; 7.407      ;
+; -5.969 ; systicks2_[3]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.969 ; systicks2_[3]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.077     ; 6.894      ;
+; -5.960 ; systicks1_[13] ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.530     ; 6.432      ;
+; -5.952 ; systicks2_[0]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.952 ; systicks2_[0]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.076     ; 6.878      ;
+; -5.919 ; systicks1_[0]  ; systicks1_[19]    ; clk          ; clk         ; 1.000        ; -0.065     ; 6.856      ;
+; -5.911 ; systicks1_[0]  ; systicks1_[15]    ; clk          ; clk         ; 1.000        ; -0.065     ; 6.848      ;
+; -5.911 ; systicks1_[5]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.073     ; 6.840      ;
+; -5.910 ; systicks1_[5]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.073     ; 6.839      ;
+; -5.910 ; systicks1_[5]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.073     ; 6.839      ;
+; -5.907 ; systicks1_[3]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.072     ; 6.837      ;
+; -5.906 ; systicks1_[3]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.072     ; 6.836      ;
+; -5.906 ; systicks1_[3]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.072     ; 6.836      ;
+; -5.890 ; systicks1_[8]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.068     ; 6.824      ;
+; -5.856 ; systicks1_[9]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.068     ; 6.790      ;
+; -5.856 ; systicks1_[4]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.073     ; 6.785      ;
+; -5.855 ; systicks1_[4]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.073     ; 6.784      ;
+; -5.855 ; systicks1_[4]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.073     ; 6.784      ;
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -557,106 +556,106 @@ No paths to report.
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.384 ; val_des_[4]       ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; val_ed_[4]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; val_ed_[1]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
+; 0.382 ; led_debug~reg0    ; led_debug~reg0    ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.384 ; val_ed_[3]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
 ; 0.384 ; val_ed_[2]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.384 ; val_ed_[0]        ; val_ed_[0]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
-; 0.385 ; val_des_[1]       ; val_des_[1]       ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
-; 0.385 ; val_des_[3]       ; val_des_[3]       ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
-; 0.385 ; val_des_[2]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
-; 0.385 ; val_des_[0]       ; val_des_[0]       ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
-; 0.402 ; led_debug~reg0    ; led_debug~reg0    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
-; 0.473 ; dig[3]~reg0       ; dig[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.740      ;
-; 0.473 ; dig[2]~reg0       ; dig[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 0.740      ;
-; 0.784 ; dig[3]~reg0       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.549      ; 1.528      ;
-; 0.846 ; val_ed_[2]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.132      ; 1.173      ;
-; 0.896 ; val_ed_[0]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.181      ;
-; 0.918 ; val_ed_[0]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.203      ;
-; 0.919 ; dig[3]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.549      ; 1.663      ;
-; 0.976 ; dig[2]~reg0       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.549      ; 1.720      ;
-; 0.976 ; dig[2]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.549      ; 1.720      ;
-; 0.980 ; val_ed_[4]        ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.132      ; 1.307      ;
-; 1.022 ; val_des_[4]       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.132      ; 1.349      ;
-; 1.072 ; systicks2_[11]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.339      ;
-; 1.072 ; systicks1_[13]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.339      ;
-; 1.114 ; val_ed_[1]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.399      ;
-; 1.156 ; dig[2]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.077      ; 1.428      ;
-; 1.200 ; dig[2]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.077      ; 1.472      ;
-; 1.200 ; dig[2]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.077      ; 1.472      ;
-; 1.246 ; val_ed_[2]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.531      ;
-; 1.290 ; systicks2_[1]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.557      ;
-; 1.290 ; systicks2_[5]     ; systicks2_[5]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.557      ;
-; 1.290 ; systicks2_[13]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.557      ;
-; 1.295 ; systicks2_[2]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.562      ;
-; 1.296 ; systicks2_[12]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.563      ;
-; 1.297 ; systicks2_[10]    ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.564      ;
-; 1.299 ; systicks2_[4]     ; systicks2_[4]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.566      ;
-; 1.301 ; systicks2_[6]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.568      ;
-; 1.303 ; systicks2_[14]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.570      ;
-; 1.312 ; dig[3]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.549      ; 2.056      ;
-; 1.314 ; systicks2_[8]     ; systicks2_[8]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.581      ;
-; 1.316 ; val_des_[0]       ; val_des_[1]       ; clk          ; clk         ; 0.000        ; 0.089      ; 1.600      ;
-; 1.319 ; systicks2_[0]     ; systicks2_[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.586      ;
-; 1.331 ; dig[3]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.077      ; 1.603      ;
-; 1.348 ; val_checkable_[3] ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.615      ;
-; 1.353 ; systicks1_[4]     ; systicks1_[4]     ; clk          ; clk         ; 0.000        ; 0.071      ; 1.619      ;
-; 1.354 ; systicks1_[7]     ; systicks1_[7]     ; clk          ; clk         ; 0.000        ; 0.071      ; 1.620      ;
-; 1.355 ; val_checkable_[4] ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.091      ; 1.641      ;
-; 1.364 ; val_ed_[4]        ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.649      ;
-; 1.364 ; systicks2_[10]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.631      ;
-; 1.373 ; dig[3]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.077      ; 1.645      ;
-; 1.374 ; dig[3]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.077      ; 1.646      ;
-; 1.379 ; val_des_[1]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.089      ; 1.663      ;
-; 1.380 ; val_ed_[0]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.132      ; 1.707      ;
-; 1.387 ; val_ed_[4]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.672      ;
-; 1.443 ; val_ed_[3]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.089      ; 1.727      ;
-; 1.455 ; val_ed_[0]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.740      ;
-; 1.455 ; val_ed_[3]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.106      ; 1.756      ;
-; 1.480 ; dig[2]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.218      ;
-; 1.481 ; dig[2]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.219      ;
-; 1.490 ; systicks2_[8]     ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.757      ;
-; 1.502 ; val_des_[2]       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.148      ; 1.845      ;
-; 1.504 ; dig[2]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.549      ; 2.248      ;
-; 1.508 ; val_ed_[4]        ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.132      ; 1.835      ;
-; 1.509 ; dig[2]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.247      ;
-; 1.527 ; dig[3]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.265      ;
-; 1.529 ; dig[3]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.267      ;
-; 1.533 ; dig[3]~reg0       ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.271      ;
-; 1.536 ; dig[3]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.274      ;
-; 1.537 ; dig[3]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.275      ;
-; 1.537 ; systicks1_[2]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.804      ;
-; 1.537 ; systicks1_[10]    ; systicks1_[10]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.804      ;
-; 1.538 ; dig[3]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.276      ;
-; 1.539 ; val_des_[0]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.089      ; 1.823      ;
-; 1.540 ; dig[2]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.278      ;
-; 1.541 ; dig[2]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.543      ; 2.279      ;
-; 1.546 ; systicks1_[12]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.813      ;
-; 1.550 ; val_des_[4]       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.132      ; 1.877      ;
-; 1.576 ; val_ed_[1]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.132      ; 1.903      ;
-; 1.596 ; systicks1_[9]     ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.071      ; 1.862      ;
-; 1.601 ; systicks2_[0]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.868      ;
-; 1.602 ; systicks1_[12]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.869      ;
-; 1.607 ; systicks2_[12]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.874      ;
-; 1.610 ; systicks1_[6]     ; systicks1_[6]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.877      ;
-; 1.611 ; systicks2_[1]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.878      ;
-; 1.611 ; systicks1_[8]     ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.071      ; 1.877      ;
-; 1.612 ; systicks2_[4]     ; systicks2_[5]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.879      ;
-; 1.612 ; systicks2_[6]     ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.879      ;
-; 1.613 ; val_ed_[2]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.898      ;
-; 1.613 ; val_ed_[2]        ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.090      ; 1.898      ;
-; 1.613 ; systicks2_[9]     ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.069      ; 1.877      ;
-; 1.616 ; systicks2_[5]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.883      ;
-; 1.616 ; systicks1_[11]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.071      ; 1.882      ;
-; 1.618 ; systicks2_[11]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.885      ;
-; 1.624 ; systicks1_[1]     ; systicks1_[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.891      ;
-; 1.628 ; systicks2_[13]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.895      ;
-; 1.628 ; systicks2_[0]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.895      ;
-; 1.628 ; systicks2_[10]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.895      ;
-; 1.632 ; systicks2_[2]     ; systicks2_[4]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.899      ;
-; 1.632 ; systicks1_[0]     ; systicks1_[0]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.899      ;
-; 1.634 ; systicks2_[4]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.901      ;
-; 1.634 ; systicks1_[17]    ; systicks1_[17]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.901      ;
+; 0.384 ; val_ed_[1]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.669      ;
+; 0.399 ; val_ed_[0]        ; val_ed_[0]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.684      ;
+; 0.452 ; val_ed_[2]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.737      ;
+; 0.466 ; val_ed_[0]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.751      ;
+; 0.470 ; val_ed_[0]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.755      ;
+; 0.709 ; val_ed_[0]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.994      ;
+; 0.721 ; val_ed_[3]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.006      ;
+; 0.822 ; val_checkable_[3] ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.089      ;
+; 0.858 ; dig[2]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.125      ;
+; 0.906 ; dig[2]~reg0       ; dig[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.544      ; 1.645      ;
+; 0.967 ; dig[2]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.234      ;
+; 1.000 ; dig[2]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.267      ;
+; 1.008 ; dig[2]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.275      ;
+; 1.196 ; dig[3]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; -0.380     ; 1.011      ;
+; 1.202 ; systicks2_[1]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.470      ;
+; 1.203 ; systicks2_[17]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.471      ;
+; 1.203 ; val_checkable_[1] ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.470      ;
+; 1.215 ; systicks1_[1]     ; systicks1_[1]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.482      ;
+; 1.216 ; systicks2_[7]     ; systicks2_[7]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.484      ;
+; 1.220 ; systicks2_[14]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.488      ;
+; 1.221 ; systicks2_[9]     ; systicks2_[9]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.489      ;
+; 1.282 ; val_checkable_[2] ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.549      ;
+; 1.290 ; systicks1_[16]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.576      ;
+; 1.291 ; systicks1_[14]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.577      ;
+; 1.301 ; dig[3]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; -0.380     ; 1.116      ;
+; 1.303 ; dig[3]~reg0       ; dig[2]~reg0       ; clk          ; clk         ; 0.000        ; -0.380     ; 1.118      ;
+; 1.332 ; systicks2_[15]    ; systicks2_[15]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.600      ;
+; 1.334 ; systicks2_[16]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.602      ;
+; 1.340 ; systicks2_[2]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.608      ;
+; 1.345 ; systicks1_[3]     ; systicks1_[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.612      ;
+; 1.348 ; systicks1_[2]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.615      ;
+; 1.351 ; systicks2_[0]     ; systicks2_[0]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.619      ;
+; 1.356 ; systicks1_[15]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.537      ; 2.088      ;
+; 1.358 ; systicks2_[10]    ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.626      ;
+; 1.406 ; dig[2]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.673      ;
+; 1.406 ; dig[2]~reg0       ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.673      ;
+; 1.408 ; dig[2]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.675      ;
+; 1.408 ; dig[2]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.675      ;
+; 1.409 ; dig[2]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.676      ;
+; 1.427 ; val_checkable_[0] ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.694      ;
+; 1.430 ; dig[2]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.697      ;
+; 1.431 ; dig[2]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.698      ;
+; 1.443 ; systicks1_[11]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.543      ; 2.181      ;
+; 1.461 ; dig[3]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; -0.380     ; 1.276      ;
+; 1.468 ; systicks1_[10]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.543      ; 2.206      ;
+; 1.487 ; systicks1_[11]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.549      ; 2.231      ;
+; 1.494 ; dig[3]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; -0.380     ; 1.309      ;
+; 1.502 ; systicks1_[12]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.789      ;
+; 1.512 ; systicks1_[10]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.549      ; 2.256      ;
+; 1.518 ; systicks1_[4]     ; systicks1_[4]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.785      ;
+; 1.520 ; systicks2_[16]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.788      ;
+; 1.521 ; systicks1_[19]    ; systicks1_[19]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.789      ;
+; 1.521 ; systicks2_[0]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.789      ;
+; 1.526 ; systicks1_[7]     ; systicks1_[7]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.793      ;
+; 1.542 ; systicks1_[9]     ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.543      ; 2.280      ;
+; 1.558 ; val_ed_[1]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.843      ;
+; 1.571 ; systicks1_[11]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.534      ; 2.300      ;
+; 1.576 ; systicks1_[19]    ; systicks1_[21]    ; clk          ; clk         ; 0.000        ; 0.522      ; 2.293      ;
+; 1.586 ; systicks1_[9]     ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.549      ; 2.330      ;
+; 1.593 ; val_checkable_[3] ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.860      ;
+; 1.594 ; val_checkable_[3] ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.861      ;
+; 1.596 ; val_checkable_[3] ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.863      ;
+; 1.596 ; val_checkable_[3] ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.863      ;
+; 1.596 ; systicks1_[10]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.534      ; 2.325      ;
+; 1.597 ; val_checkable_[3] ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.864      ;
+; 1.600 ; val_checkable_[3] ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.867      ;
+; 1.604 ; val_checkable_[1] ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.871      ;
+; 1.604 ; val_checkable_[1] ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.871      ;
+; 1.606 ; val_checkable_[1] ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.873      ;
+; 1.606 ; val_checkable_[1] ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.873      ;
+; 1.606 ; val_checkable_[1] ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.873      ;
+; 1.607 ; val_checkable_[3] ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.874      ;
+; 1.607 ; val_checkable_[1] ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.874      ;
+; 1.608 ; val_checkable_[1] ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.072      ; 1.875      ;
+; 1.609 ; systicks1_[8]     ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.543      ; 2.347      ;
+; 1.613 ; systicks1_[11]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.549      ; 2.357      ;
+; 1.615 ; systicks2_[15]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.883      ;
+; 1.617 ; systicks1_[5]     ; systicks1_[5]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.884      ;
+; 1.621 ; systicks1_[14]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.907      ;
+; 1.630 ; systicks1_[19]    ; systicks1_[20]    ; clk          ; clk         ; 0.000        ; 0.522      ; 2.347      ;
+; 1.632 ; systicks2_[7]     ; systicks2_[9]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.900      ;
+; 1.637 ; systicks2_[12]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.905      ;
+; 1.638 ; systicks2_[11]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.906      ;
+; 1.638 ; systicks1_[10]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.549      ; 2.382      ;
+; 1.643 ; systicks1_[15]    ; systicks1_[15]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.911      ;
+; 1.645 ; systicks2_[14]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.913      ;
+; 1.647 ; systicks1_[11]    ; systicks1_[11]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.914      ;
+; 1.648 ; systicks2_[14]    ; systicks2_[15]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.916      ;
+; 1.651 ; systicks2_[13]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.919      ;
+; 1.653 ; systicks1_[10]    ; systicks1_[10]    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.920      ;
+; 1.653 ; systicks2_[15]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.073      ; 1.921      ;
+; 1.653 ; systicks1_[8]     ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.549      ; 2.397      ;
+; 1.655 ; systicks1_[2]     ; systicks1_[3]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.922      ;
+; 1.657 ; systicks2_[1]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.073      ; 1.925      ;
+; 1.659 ; systicks1_[15]    ; systicks1_[17]    ; clk          ; clk         ; 0.000        ; 0.522      ; 2.376      ;
+; 1.660 ; systicks1_[8]     ; systicks1_[8]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.927      ;
+; 1.663 ; systicks1_[6]     ; systicks1_[6]     ; clk          ; clk         ; 0.000        ; 0.072      ; 1.930      ;
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -671,7 +670,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -3.299 ; -150.796          ;
+; clk   ; -2.622 ; -140.507          ;
 +-------+--------+-------------------+
 
 
@@ -680,7 +679,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.179 ; 0.000             ;
+; clk   ; 0.178 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -701,7 +700,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -90.574                         ;
+; clk   ; -3.000 ; -90.472                         ;
 +-------+--------+---------------------------------+
 
 
@@ -710,106 +709,106 @@ No paths to report.
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node      ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
-; -3.299 ; systicks1_[1]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.446      ;
-; -3.297 ; systicks1_[1]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.438      ;
-; -3.292 ; systicks1_[1]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.433      ;
-; -3.291 ; systicks1_[1]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.432      ;
-; -3.289 ; systicks1_[1]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.430      ;
-; -3.287 ; systicks1_[1]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.428      ;
-; -3.286 ; systicks1_[1]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.427      ;
-; -3.249 ; systicks1_[3]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.396      ;
-; -3.247 ; systicks1_[3]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.388      ;
-; -3.244 ; systicks1_[0]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.162      ; 4.393      ;
-; -3.242 ; systicks1_[0]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.385      ;
-; -3.242 ; systicks1_[3]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.383      ;
-; -3.241 ; systicks1_[3]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.382      ;
-; -3.239 ; systicks1_[3]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.380      ;
-; -3.237 ; systicks1_[0]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.380      ;
-; -3.237 ; systicks1_[3]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.378      ;
-; -3.236 ; systicks1_[0]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.379      ;
-; -3.236 ; systicks1_[3]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.377      ;
-; -3.234 ; systicks1_[0]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.377      ;
-; -3.232 ; systicks1_[0]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.375      ;
-; -3.231 ; systicks1_[0]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.374      ;
-; -3.183 ; systicks1_[5]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.330      ;
-; -3.181 ; systicks1_[5]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.322      ;
-; -3.178 ; systicks1_[2]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.162      ; 4.327      ;
-; -3.176 ; systicks1_[2]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.319      ;
-; -3.176 ; systicks1_[5]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.317      ;
-; -3.175 ; systicks1_[5]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.316      ;
-; -3.173 ; systicks1_[5]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.314      ;
-; -3.171 ; systicks1_[2]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.314      ;
-; -3.171 ; systicks1_[5]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.312      ;
-; -3.170 ; systicks1_[2]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.313      ;
-; -3.170 ; systicks1_[5]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.311      ;
-; -3.168 ; systicks1_[2]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.311      ;
-; -3.166 ; systicks1_[2]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.309      ;
-; -3.165 ; systicks1_[2]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.308      ;
-; -3.042 ; systicks1_[6]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.162      ; 4.191      ;
-; -3.040 ; systicks1_[6]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.183      ;
-; -3.037 ; systicks1_[4]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.161      ; 4.185      ;
-; -3.035 ; systicks1_[4]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.177      ;
-; -3.035 ; systicks1_[6]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.178      ;
-; -3.034 ; systicks1_[6]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.177      ;
-; -3.032 ; systicks1_[6]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.175      ;
-; -3.030 ; systicks1_[4]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.172      ;
-; -3.030 ; systicks1_[6]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.173      ;
-; -3.029 ; systicks1_[4]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.171      ;
-; -3.029 ; systicks1_[6]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 4.172      ;
-; -3.027 ; systicks1_[4]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.169      ;
-; -3.025 ; systicks1_[4]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.167      ;
-; -3.024 ; systicks1_[4]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.166      ;
-; -3.018 ; systicks1_[7]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.161      ; 4.166      ;
-; -3.016 ; systicks1_[7]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.158      ;
-; -3.011 ; systicks1_[7]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.153      ;
-; -3.010 ; systicks1_[7]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.152      ;
-; -3.008 ; systicks1_[7]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.150      ;
-; -3.006 ; systicks1_[7]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.148      ;
-; -3.005 ; systicks1_[7]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.147      ;
-; -2.962 ; systicks1_[11] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.109      ;
-; -2.960 ; systicks1_[11] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.101      ;
-; -2.955 ; systicks1_[11] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.096      ;
-; -2.954 ; systicks1_[11] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.095      ;
-; -2.952 ; systicks1_[11] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.093      ;
-; -2.950 ; systicks1_[11] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.091      ;
-; -2.949 ; systicks1_[11] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.090      ;
-; -2.947 ; systicks1_[9]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.161      ; 4.095      ;
-; -2.945 ; systicks1_[9]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.087      ;
-; -2.940 ; systicks1_[9]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.082      ;
-; -2.939 ; systicks1_[9]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.081      ;
-; -2.937 ; systicks1_[9]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.079      ;
-; -2.935 ; systicks1_[9]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.077      ;
-; -2.934 ; systicks1_[9]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.076      ;
-; -2.927 ; systicks1_[10] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.074      ;
-; -2.925 ; systicks1_[10] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.066      ;
-; -2.921 ; systicks1_[1]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.872      ;
-; -2.920 ; systicks1_[10] ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.061      ;
-; -2.919 ; systicks1_[10] ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.060      ;
-; -2.918 ; systicks1_[1]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.869      ;
-; -2.917 ; systicks1_[10] ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.058      ;
-; -2.915 ; systicks1_[10] ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.056      ;
-; -2.914 ; systicks1_[10] ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.154      ; 4.055      ;
-; -2.902 ; systicks1_[8]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.161      ; 4.050      ;
-; -2.900 ; systicks1_[8]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.042      ;
-; -2.897 ; systicks1_[1]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.848      ;
-; -2.895 ; systicks1_[8]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.037      ;
-; -2.894 ; systicks1_[8]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.036      ;
-; -2.892 ; systicks1_[8]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.034      ;
-; -2.890 ; systicks1_[8]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.032      ;
-; -2.889 ; systicks1_[8]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; 0.155      ; 4.031      ;
-; -2.871 ; systicks1_[3]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.822      ;
-; -2.868 ; systicks1_[3]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.819      ;
-; -2.866 ; systicks1_[0]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.034     ; 3.819      ;
-; -2.863 ; systicks1_[0]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.034     ; 3.816      ;
-; -2.847 ; systicks1_[3]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.798      ;
-; -2.842 ; systicks1_[0]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.034     ; 3.795      ;
-; -2.805 ; systicks1_[5]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.756      ;
-; -2.802 ; systicks1_[5]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.036     ; 3.753      ;
-; -2.800 ; systicks1_[2]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.034     ; 3.753      ;
-; -2.797 ; systicks1_[12] ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; 0.162      ; 3.946      ;
-; -2.797 ; systicks1_[2]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.034     ; 3.750      ;
-; -2.795 ; systicks1_[12] ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; 0.156      ; 3.938      ;
-; -2.794 ; systicks1_[1]  ; systicks1_[15]    ; clk          ; clk         ; 1.000        ; -0.038     ; 3.743      ;
+; -2.622 ; systicks1_[0]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.036     ; 3.573      ;
+; -2.478 ; systicks1_[0]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.039     ; 3.426      ;
+; -2.478 ; systicks1_[0]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.039     ; 3.426      ;
+; -2.477 ; systicks1_[0]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.039     ; 3.425      ;
+; -2.395 ; systicks1_[1]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.033     ; 3.349      ;
+; -2.349 ; systicks1_[0]  ; systicks1_[6]     ; clk          ; clk         ; 1.000        ; -0.038     ; 3.298      ;
+; -2.348 ; systicks1_[0]  ; systicks1_[11]    ; clk          ; clk         ; 1.000        ; -0.038     ; 3.297      ;
+; -2.345 ; systicks1_[0]  ; systicks1_[4]     ; clk          ; clk         ; 1.000        ; -0.038     ; 3.294      ;
+; -2.344 ; systicks1_[0]  ; systicks1_[8]     ; clk          ; clk         ; 1.000        ; -0.038     ; 3.293      ;
+; -2.343 ; systicks1_[0]  ; systicks1_[5]     ; clk          ; clk         ; 1.000        ; -0.038     ; 3.292      ;
+; -2.340 ; systicks1_[0]  ; systicks1_[9]     ; clk          ; clk         ; 1.000        ; -0.038     ; 3.289      ;
+; -2.337 ; systicks1_[0]  ; systicks1_[10]    ; clk          ; clk         ; 1.000        ; -0.038     ; 3.286      ;
+; -2.336 ; systicks1_[0]  ; systicks1_[7]     ; clk          ; clk         ; 1.000        ; -0.038     ; 3.285      ;
+; -2.336 ; systicks1_[0]  ; systicks1_[23]    ; clk          ; clk         ; 1.000        ; 0.150      ; 3.473      ;
+; -2.335 ; systicks1_[0]  ; systicks1_[18]    ; clk          ; clk         ; 1.000        ; 0.150      ; 3.472      ;
+; -2.334 ; systicks1_[0]  ; systicks1_[13]    ; clk          ; clk         ; 1.000        ; 0.150      ; 3.471      ;
+; -2.333 ; systicks1_[0]  ; systicks1_[17]    ; clk          ; clk         ; 1.000        ; 0.150      ; 3.470      ;
+; -2.332 ; systicks1_[5]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.034     ; 3.285      ;
+; -2.329 ; systicks1_[0]  ; systicks1_[20]    ; clk          ; clk         ; 1.000        ; 0.150      ; 3.466      ;
+; -2.329 ; systicks1_[0]  ; systicks1_[21]    ; clk          ; clk         ; 1.000        ; 0.150      ; 3.466      ;
+; -2.327 ; systicks1_[3]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.033     ; 3.281      ;
+; -2.285 ; systicks1_[4]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.034     ; 3.238      ;
+; -2.279 ; systicks1_[2]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.033     ; 3.233      ;
+; -2.278 ; systicks1_[0]  ; val_des_[1]       ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.278 ; systicks1_[0]  ; val_des_[3]       ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.278 ; systicks1_[0]  ; val_des_[2]       ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.278 ; systicks1_[0]  ; val_des_[0]       ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.278 ; systicks1_[0]  ; val_ed_[3]        ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.278 ; systicks1_[0]  ; val_ed_[2]        ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.278 ; systicks1_[0]  ; val_ed_[1]        ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.278 ; systicks1_[0]  ; val_ed_[0]        ; clk          ; clk         ; 1.000        ; 0.146      ; 3.411      ;
+; -2.277 ; systicks1_[7]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.034     ; 3.230      ;
+; -2.270 ; systicks2_[1]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.270 ; systicks2_[1]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.219      ;
+; -2.266 ; systicks1_[0]  ; led_debug~reg0    ; clk          ; clk         ; 1.000        ; 0.168      ; 3.421      ;
+; -2.262 ; systicks1_[0]  ; systicks1_[22]    ; clk          ; clk         ; 1.000        ; 0.168      ; 3.417      ;
+; -2.251 ; systicks1_[1]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.036     ; 3.202      ;
+; -2.251 ; systicks1_[1]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.036     ; 3.202      ;
+; -2.250 ; systicks1_[1]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.036     ; 3.201      ;
+; -2.248 ; systicks1_[13] ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.230     ; 3.005      ;
+; -2.235 ; systicks1_[6]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.034     ; 3.188      ;
+; -2.230 ; systicks2_[3]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.230 ; systicks2_[3]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.177      ;
+; -2.222 ; systicks2_[0]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.222 ; systicks2_[0]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.038     ; 3.171      ;
+; -2.220 ; systicks1_[0]  ; systicks1_[19]    ; clk          ; clk         ; 1.000        ; -0.031     ; 3.176      ;
+; -2.213 ; systicks1_[0]  ; systicks1_[15]    ; clk          ; clk         ; 1.000        ; -0.031     ; 3.169      ;
+; -2.199 ; systicks1_[9]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.034     ; 3.152      ;
+; -2.188 ; systicks1_[5]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.037     ; 3.138      ;
+; -2.188 ; systicks1_[5]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.037     ; 3.138      ;
+; -2.187 ; systicks1_[5]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.037     ; 3.137      ;
+; -2.183 ; systicks1_[3]  ; systicks1_[1]     ; clk          ; clk         ; 1.000        ; -0.036     ; 3.134      ;
+; -2.183 ; systicks1_[3]  ; systicks1_[2]     ; clk          ; clk         ; 1.000        ; -0.036     ; 3.134      ;
+; -2.182 ; systicks1_[3]  ; systicks1_[3]     ; clk          ; clk         ; 1.000        ; -0.036     ; 3.133      ;
+; -2.166 ; systicks1_[8]  ; systicks1_[0]     ; clk          ; clk         ; 1.000        ; -0.034     ; 3.119      ;
+; -2.161 ; systicks1_[0]  ; systicks1_[14]    ; clk          ; clk         ; 1.000        ; 0.161      ; 3.309      ;
+; -2.160 ; systicks1_[0]  ; systicks1_[16]    ; clk          ; clk         ; 1.000        ; 0.161      ; 3.308      ;
+; -2.148 ; systicks1_[0]  ; systicks1_[12]    ; clk          ; clk         ; 1.000        ; 0.155      ; 3.290      ;
+; -2.148 ; systicks2_[5]  ; seg[1]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; val_checkable_[0] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; seg[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; seg[3]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; seg[4]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; seg[5]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; seg[6]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; seg[7]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; val_checkable_[3] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; val_checkable_[2] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; val_checkable_[1] ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
+; -2.148 ; systicks2_[5]  ; dig[2]~reg0       ; clk          ; clk         ; 1.000        ; -0.040     ; 3.095      ;
 +--------+----------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -818,106 +817,106 @@ No paths to report.
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
-; 0.179 ; val_des_[4]       ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; val_ed_[4]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; val_ed_[1]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.178 ; led_debug~reg0    ; led_debug~reg0    ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.179 ; val_ed_[3]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.179 ; val_ed_[2]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.179 ; val_ed_[0]        ; val_ed_[0]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
-; 0.180 ; val_des_[1]       ; val_des_[1]       ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
-; 0.180 ; val_des_[3]       ; val_des_[3]       ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
-; 0.180 ; val_des_[2]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
-; 0.180 ; val_des_[0]       ; val_des_[0]       ; clk          ; clk         ; 0.000        ; 0.043      ; 0.307      ;
-; 0.187 ; led_debug~reg0    ; led_debug~reg0    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.212 ; dig[3]~reg0       ; dig[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.332      ;
-; 0.212 ; dig[2]~reg0       ; dig[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.332      ;
-; 0.361 ; dig[3]~reg0       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.248      ; 0.693      ;
-; 0.376 ; val_ed_[2]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.059      ; 0.519      ;
-; 0.385 ; val_ed_[0]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.513      ;
-; 0.392 ; val_ed_[0]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.520      ;
-; 0.426 ; dig[3]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.248      ; 0.758      ;
-; 0.437 ; val_ed_[4]        ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.059      ; 0.580      ;
-; 0.438 ; dig[2]~reg0       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.248      ; 0.770      ;
-; 0.439 ; dig[2]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.248      ; 0.771      ;
-; 0.455 ; systicks2_[11]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
-; 0.457 ; systicks1_[13]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.577      ;
-; 0.467 ; val_des_[4]       ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.059      ; 0.610      ;
-; 0.479 ; val_ed_[1]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.607      ;
-; 0.522 ; dig[2]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.649      ;
-; 0.525 ; val_ed_[2]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.653      ;
-; 0.544 ; dig[2]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.671      ;
-; 0.544 ; dig[2]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.671      ;
-; 0.551 ; systicks2_[1]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.671      ;
-; 0.552 ; systicks2_[13]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.672      ;
-; 0.553 ; systicks2_[2]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.673      ;
-; 0.553 ; systicks2_[5]     ; systicks2_[5]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.673      ;
-; 0.555 ; systicks2_[12]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.675      ;
-; 0.559 ; systicks2_[4]     ; systicks2_[4]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.679      ;
-; 0.559 ; systicks2_[6]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.679      ;
-; 0.559 ; systicks2_[10]    ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.679      ;
-; 0.559 ; systicks2_[14]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.679      ;
-; 0.566 ; systicks2_[8]     ; systicks2_[8]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.686      ;
-; 0.571 ; val_checkable_[3] ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.691      ;
-; 0.582 ; val_ed_[4]        ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.710      ;
-; 0.582 ; val_ed_[0]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.059      ; 0.725      ;
-; 0.583 ; systicks2_[0]     ; systicks2_[0]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.703      ;
-; 0.583 ; systicks1_[4]     ; systicks1_[4]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.703      ;
-; 0.583 ; systicks1_[7]     ; systicks1_[7]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.703      ;
-; 0.587 ; dig[3]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.248      ; 0.919      ;
-; 0.594 ; val_ed_[4]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.722      ;
-; 0.594 ; val_des_[0]       ; val_des_[1]       ; clk          ; clk         ; 0.000        ; 0.043      ; 0.721      ;
-; 0.605 ; val_ed_[0]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.733      ;
-; 0.606 ; dig[3]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.733      ;
-; 0.607 ; val_checkable_[4] ; val_checkable_[4] ; clk          ; clk         ; 0.000        ; 0.045      ; 0.736      ;
-; 0.609 ; val_ed_[3]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.043      ; 0.736      ;
-; 0.609 ; val_des_[1]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.043      ; 0.736      ;
-; 0.614 ; systicks2_[10]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.734      ;
-; 0.621 ; dig[3]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.748      ;
-; 0.622 ; dig[3]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.749      ;
-; 0.654 ; val_ed_[3]        ; val_ed_[4]        ; clk          ; clk         ; 0.000        ; 0.054      ; 0.792      ;
-; 0.663 ; val_ed_[4]        ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.059      ; 0.806      ;
-; 0.664 ; dig[2]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.248      ; 0.996      ;
-; 0.666 ; systicks1_[10]    ; systicks1_[10]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.786      ;
-; 0.668 ; val_des_[0]       ; val_des_[2]       ; clk          ; clk         ; 0.000        ; 0.043      ; 0.795      ;
-; 0.676 ; val_ed_[1]        ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.059      ; 0.819      ;
-; 0.681 ; systicks2_[8]     ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.801      ;
-; 0.692 ; dig[3]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.018      ;
-; 0.693 ; dig[3]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.019      ;
-; 0.693 ; val_ed_[2]        ; val_des_[4]       ; clk          ; clk         ; 0.000        ; 0.044      ; 0.821      ;
-; 0.693 ; val_des_[4]       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.059      ; 0.836      ;
-; 0.693 ; systicks1_[2]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.813      ;
-; 0.694 ; systicks1_[12]    ; systicks1_[13]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.814      ;
-; 0.697 ; dig[3]~reg0       ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.023      ;
-; 0.698 ; dig[2]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.024      ;
-; 0.699 ; dig[3]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.025      ;
-; 0.700 ; dig[2]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.026      ;
-; 0.700 ; systicks2_[1]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.820      ;
-; 0.701 ; dig[3]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.027      ;
-; 0.702 ; dig[3]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.028      ;
-; 0.703 ; val_des_[2]       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.069      ; 0.856      ;
-; 0.704 ; systicks2_[11]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.824      ;
-; 0.704 ; systicks2_[5]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.824      ;
-; 0.705 ; dig[2]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.031      ;
-; 0.705 ; val_ed_[2]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.833      ;
-; 0.708 ; dig[2]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.034      ;
-; 0.708 ; systicks2_[13]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.828      ;
-; 0.708 ; systicks1_[1]     ; systicks1_[1]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.828      ;
-; 0.710 ; dig[2]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.242      ; 1.036      ;
-; 0.710 ; systicks1_[6]     ; systicks1_[6]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.830      ;
-; 0.711 ; systicks2_[12]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.831      ;
-; 0.712 ; systicks2_[0]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.832      ;
-; 0.712 ; systicks1_[17]    ; systicks1_[17]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.832      ;
-; 0.714 ; systicks1_[0]     ; systicks1_[0]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.834      ;
-; 0.715 ; systicks2_[4]     ; systicks2_[5]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.835      ;
-; 0.715 ; systicks2_[0]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.835      ;
-; 0.717 ; systicks2_[2]     ; systicks2_[4]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.837      ;
-; 0.717 ; systicks2_[10]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.837      ;
-; 0.720 ; systicks2_[9]     ; systicks2_[9]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.840      ;
-; 0.720 ; systicks2_[4]     ; systicks2_[6]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.840      ;
-; 0.721 ; systicks2_[8]     ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.841      ;
-; 0.721 ; systicks2_[12]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.841      ;
-; 0.722 ; systicks1_[12]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.842      ;
-; 0.727 ; systicks2_[6]     ; systicks2_[8]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.847      ;
-; 0.730 ; systicks2_[15]    ; systicks2_[15]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.850      ;
+; 0.179 ; val_ed_[1]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.186 ; val_ed_[0]        ; val_ed_[0]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.314      ;
+; 0.197 ; val_ed_[2]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.325      ;
+; 0.206 ; val_ed_[0]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.334      ;
+; 0.208 ; val_ed_[0]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.336      ;
+; 0.310 ; val_ed_[0]        ; val_ed_[3]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.438      ;
+; 0.311 ; val_ed_[3]        ; val_ed_[1]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.439      ;
+; 0.348 ; val_checkable_[3] ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.468      ;
+; 0.365 ; dig[2]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.485      ;
+; 0.399 ; dig[2]~reg0       ; dig[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.237      ; 0.720      ;
+; 0.423 ; dig[2]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.543      ;
+; 0.435 ; dig[2]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.555      ;
+; 0.441 ; dig[2]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.561      ;
+; 0.509 ; systicks2_[17]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.630      ;
+; 0.511 ; systicks2_[1]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.631      ;
+; 0.517 ; systicks1_[1]     ; systicks1_[1]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.637      ;
+; 0.520 ; systicks2_[7]     ; systicks2_[7]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.640      ;
+; 0.520 ; systicks2_[14]    ; systicks2_[14]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.641      ;
+; 0.523 ; systicks2_[9]     ; systicks2_[9]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.643      ;
+; 0.532 ; dig[3]~reg0       ; val_checkable_[3] ; clk          ; clk         ; 0.000        ; -0.156     ; 0.460      ;
+; 0.532 ; val_checkable_[1] ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.652      ;
+; 0.548 ; val_checkable_[2] ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.668      ;
+; 0.552 ; dig[3]~reg0       ; dig[2]~reg0       ; clk          ; clk         ; 0.000        ; -0.156     ; 0.480      ;
+; 0.553 ; dig[3]~reg0       ; val_checkable_[2] ; clk          ; clk         ; 0.000        ; -0.156     ; 0.481      ;
+; 0.555 ; systicks1_[16]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.683      ;
+; 0.557 ; systicks1_[14]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.685      ;
+; 0.573 ; systicks2_[15]    ; systicks2_[15]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.694      ;
+; 0.573 ; systicks1_[15]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.236      ; 0.893      ;
+; 0.575 ; systicks2_[16]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.696      ;
+; 0.576 ; systicks2_[2]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.696      ;
+; 0.580 ; systicks1_[3]     ; systicks1_[3]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.700      ;
+; 0.581 ; systicks1_[2]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.701      ;
+; 0.586 ; systicks2_[10]    ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.707      ;
+; 0.595 ; systicks2_[0]     ; systicks2_[0]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.715      ;
+; 0.621 ; systicks1_[11]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.237      ; 0.942      ;
+; 0.627 ; dig[3]~reg0       ; val_checkable_[1] ; clk          ; clk         ; 0.000        ; -0.156     ; 0.555      ;
+; 0.630 ; val_checkable_[0] ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.750      ;
+; 0.630 ; systicks1_[10]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.237      ; 0.951      ;
+; 0.634 ; dig[2]~reg0       ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.754      ;
+; 0.637 ; dig[2]~reg0       ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.757      ;
+; 0.639 ; dig[2]~reg0       ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.759      ;
+; 0.640 ; dig[2]~reg0       ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.760      ;
+; 0.641 ; dig[2]~reg0       ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.761      ;
+; 0.641 ; dig[2]~reg0       ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.761      ;
+; 0.642 ; dig[2]~reg0       ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.762      ;
+; 0.648 ; dig[3]~reg0       ; val_checkable_[0] ; clk          ; clk         ; 0.000        ; -0.156     ; 0.576      ;
+; 0.650 ; systicks1_[12]    ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.778      ;
+; 0.652 ; systicks1_[11]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.243      ; 0.979      ;
+; 0.654 ; systicks1_[4]     ; systicks1_[4]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.774      ;
+; 0.656 ; systicks1_[19]    ; systicks1_[19]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.777      ;
+; 0.659 ; systicks1_[7]     ; systicks1_[7]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.779      ;
+; 0.661 ; systicks1_[10]    ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.243      ; 0.988      ;
+; 0.669 ; systicks2_[16]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.790      ;
+; 0.669 ; systicks2_[0]     ; systicks2_[1]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.789      ;
+; 0.669 ; systicks1_[9]     ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.237      ; 0.990      ;
+; 0.697 ; val_checkable_[3] ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.817      ;
+; 0.698 ; val_checkable_[3] ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.818      ;
+; 0.699 ; systicks1_[8]     ; systicks1_[12]    ; clk          ; clk         ; 0.000        ; 0.237      ; 1.020      ;
+; 0.700 ; systicks1_[9]     ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.243      ; 1.027      ;
+; 0.701 ; val_checkable_[3] ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.821      ;
+; 0.704 ; val_checkable_[3] ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.824      ;
+; 0.704 ; val_checkable_[3] ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.824      ;
+; 0.705 ; val_checkable_[3] ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.825      ;
+; 0.706 ; val_checkable_[1] ; seg[6]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.826      ;
+; 0.706 ; val_checkable_[1] ; seg[7]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.826      ;
+; 0.707 ; val_checkable_[3] ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.827      ;
+; 0.707 ; val_checkable_[1] ; seg[4]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.827      ;
+; 0.708 ; systicks1_[5]     ; systicks1_[5]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.828      ;
+; 0.708 ; val_checkable_[1] ; seg[2]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.828      ;
+; 0.708 ; val_checkable_[1] ; seg[3]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.828      ;
+; 0.709 ; val_checkable_[1] ; seg[1]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.829      ;
+; 0.710 ; val_checkable_[1] ; seg[5]~reg0       ; clk          ; clk         ; 0.000        ; 0.036      ; 0.830      ;
+; 0.712 ; systicks2_[11]    ; systicks2_[11]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.833      ;
+; 0.716 ; systicks1_[14]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.844      ;
+; 0.716 ; systicks1_[11]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.243      ; 1.043      ;
+; 0.718 ; systicks1_[19]    ; systicks1_[20]    ; clk          ; clk         ; 0.000        ; 0.225      ; 1.027      ;
+; 0.719 ; val_ed_[1]        ; val_ed_[2]        ; clk          ; clk         ; 0.000        ; 0.044      ; 0.847      ;
+; 0.720 ; systicks2_[13]    ; systicks2_[13]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.841      ;
+; 0.721 ; systicks1_[15]    ; systicks1_[15]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.842      ;
+; 0.721 ; systicks2_[15]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.842      ;
+; 0.722 ; systicks2_[15]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.843      ;
+; 0.723 ; systicks2_[12]    ; systicks2_[12]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.844      ;
+; 0.724 ; systicks2_[1]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.844      ;
+; 0.725 ; systicks1_[10]    ; systicks1_[16]    ; clk          ; clk         ; 0.000        ; 0.243      ; 1.052      ;
+; 0.728 ; systicks1_[11]    ; systicks1_[11]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.848      ;
+; 0.729 ; systicks1_[1]     ; systicks1_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.849      ;
+; 0.730 ; systicks1_[8]     ; systicks1_[14]    ; clk          ; clk         ; 0.000        ; 0.243      ; 1.057      ;
+; 0.733 ; systicks2_[7]     ; systicks2_[9]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.853      ;
+; 0.734 ; systicks1_[19]    ; systicks1_[21]    ; clk          ; clk         ; 0.000        ; 0.225      ; 1.043      ;
+; 0.734 ; systicks2_[14]    ; systicks2_[15]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.855      ;
+; 0.735 ; systicks2_[9]     ; systicks2_[10]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.855      ;
+; 0.736 ; systicks1_[10]    ; systicks1_[10]    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.736 ; systicks2_[14]    ; systicks2_[17]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.857      ;
+; 0.736 ; systicks2_[0]     ; systicks2_[2]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.856      ;
+; 0.737 ; systicks2_[14]    ; systicks2_[16]    ; clk          ; clk         ; 0.000        ; 0.037      ; 0.858      ;
+; 0.738 ; systicks1_[3]     ; systicks1_[4]     ; clk          ; clk         ; 0.000        ; 0.037      ; 0.859      ;
+; 0.739 ; systicks1_[8]     ; systicks1_[8]     ; clk          ; clk         ; 0.000        ; 0.036      ; 0.859      ;
 +-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -932,10 +931,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -8.943   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -8.943   ; 0.179 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -436.897 ; 0.0   ; 0.0      ; 0.0     ; -102.629            ;
-;  clk             ; -436.897 ; 0.000 ; N/A      ; N/A     ; -102.629            ;
+; Worst-case Slack ; -7.297   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -7.297   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -408.828 ; 0.0   ; 0.0      ; 0.0     ; -102.629            ;
+;  clk             ; -408.828 ; 0.000 ; N/A      ; N/A     ; -102.629            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1053,7 +1052,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 50853    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 22603    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1063,7 +1062,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 50853    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 22603    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1163,7 +1162,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Tue Aug 13 21:16:31 2024
+    Info: Processing started: Wed Aug 14 11:54:50 2024
 Info: Command: quartus_sta alarm -c alarm
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1180,14 +1179,14 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.943
+Info (332146): Worst-case setup slack is -7.297
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.943            -436.897 clk 
-Info (332146): Worst-case hold slack is 0.435
+    Info (332119):    -7.297            -408.828 clk 
+Info (332146): Worst-case hold slack is 0.432
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.435               0.000 clk 
+    Info (332119):     0.432               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1200,14 +1199,14 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.344
+Info (332146): Worst-case setup slack is -6.750
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.344            -403.784 clk 
-Info (332146): Worst-case hold slack is 0.384
+    Info (332119):    -6.750            -379.140 clk 
+Info (332146): Worst-case hold slack is 0.382
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.384               0.000 clk 
+    Info (332119):     0.382               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1218,26 +1217,26 @@ Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.299
+Info (332146): Worst-case setup slack is -2.622
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.299            -150.796 clk 
-Info (332146): Worst-case hold slack is 0.179
+    Info (332119):    -2.622            -140.507 clk 
+Info (332146): Worst-case hold slack is 0.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.179               0.000 clk 
+    Info (332119):     0.178               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -90.574 clk 
+    Info (332119):    -3.000             -90.472 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Tue Aug 13 21:16:33 2024
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Wed Aug 14 11:54:51 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

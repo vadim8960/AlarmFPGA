@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Aug 13 21:16:25 2024
+Analysis & Synthesis Status : Successful - Wed Aug 14 11:54:43 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 Revision Name : alarm
 Top-level Entity Name : alarm
 Family : Cyclone IV E
-Total logic elements : 151
-    Total combinational functions : 151
+Total logic elements : 140
+    Total combinational functions : 140
     Dedicated logic registers : 67
 Total registers : 67
 Total pins : 16
