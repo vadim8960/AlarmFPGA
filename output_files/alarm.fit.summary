@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu Aug 15 18:20:14 2024
+Fitter Status : Successful - Thu Aug 15 22:24:58 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 Revision Name : alarm
 Top-level Entity Name : alarm
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 90 / 6,272 ( 1 % )
-    Total combinational functions : 87 / 6,272 ( 1 % )
-    Dedicated logic registers : 59 / 6,272 ( < 1 % )
-Total registers : 59
+Total logic elements : 107 / 6,272 ( 2 % )
+    Total combinational functions : 105 / 6,272 ( 2 % )
+    Dedicated logic registers : 58 / 6,272 ( < 1 % )
+Total registers : 58
 Total pins : 19 / 92 ( 21 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )

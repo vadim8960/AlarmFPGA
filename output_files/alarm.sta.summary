@@ -2,20 +2,28 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.545
-TNS   : -61.360
-
 Type  : Slow 1200mV 85C Model Setup 'div50000max'
-Slack : -2.448
-TNS   : -47.461
+Slack : -4.391
+TNS   : -70.851
+
+Type  : Slow 1200mV 85C Model Setup 'div1000max'
+Slack : -4.193
+TNS   : -32.947
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.084
+TNS   : -43.290
+
+Type  : Slow 1200mV 85C Model Hold 'div1000max'
+Slack : 0.234
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'div50000max'
-Slack : 0.432
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.489
+Slack : 0.492
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -24,22 +32,34 @@ TNS   : -44.636
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div50000max'
 Slack : -1.487
-TNS   : -46.097
+TNS   : -44.610
 
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.365
-TNS   : -55.367
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div1000max'
+Slack : -1.487
+TNS   : -19.331
 
 Type  : Slow 1200mV 0C Model Setup 'div50000max'
-Slack : -2.253
-TNS   : -41.779
+Slack : -3.940
+TNS   : -63.542
+
+Type  : Slow 1200mV 0C Model Setup 'div1000max'
+Slack : -3.756
+TNS   : -29.577
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.976
+TNS   : -37.835
+
+Type  : Slow 1200mV 0C Model Hold 'div1000max'
+Slack : 0.197
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'div50000max'
-Slack : 0.382
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.454
+Slack : 0.456
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -48,30 +68,46 @@ TNS   : -44.636
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div50000max'
 Slack : -1.487
-TNS   : -46.097
+TNS   : -44.610
 
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.020
-TNS   : -16.932
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div1000max'
+Slack : -1.487
+TNS   : -19.331
 
 Type  : Fast 1200mV 0C Model Setup 'div50000max'
-Slack : -0.536
-TNS   : -6.870
+Slack : -1.316
+TNS   : -16.528
+
+Type  : Fast 1200mV 0C Model Setup 'div1000max'
+Slack : -1.235
+TNS   : -7.221
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.862
+TNS   : -13.061
+
+Type  : Fast 1200mV 0C Model Hold 'div1000max'
+Slack : 0.085
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'div50000max'
-Slack : 0.179
+Slack : 0.175
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.195
+Slack : 0.197
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -39.251
+TNS   : -39.294
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div50000max'
 Slack : -1.000
-TNS   : -31.000
+TNS   : -30.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div1000max'
+Slack : -1.000
+TNS   : -13.000
 
 ------------------------------------------------------------
