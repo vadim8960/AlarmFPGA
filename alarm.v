@@ -2,6 +2,10 @@
 module alarm (
 	input clk,
 	input rst,
+
+	input upbtn,
+	input dnbtn,
+	input startbtn,
 	
 	output reg buzz,
 	
@@ -10,6 +14,12 @@ module alarm (
 	output reg [7:0] seg,
 	output reg [3:0] dig
 );
+
+parameter SET_TIME = 2'b00,
+          CLOCK_DOWN = 2'b01,
+          BEEP = 2'b10;
+
+reg [2:0] global_state_ = SET_TIME;
 
 initial dig = 4'b0111;
 
@@ -26,8 +36,12 @@ reg div1000max;
 wire sec;
 wire msec;
 
+wire clock_zero;
+
 assign sec = div50000max & div1000max;
 assign msec = div50000max;
+
+assign clock_zero = (val_ed_ == 0) && (val_des_ == 0) && (val_sot_ == 0);
 
 always @(posedge clk)
 begin
@@ -45,8 +59,6 @@ end
 
 always @(posedge sec)
 begin
-	led_debug = ~led_debug;
-
 	val_ed_ = val_ed_ + 1'b1;	
 	if (val_ed_ == 10) begin
 		val_ed_ = 0;
@@ -97,6 +109,42 @@ begin
 		4'd9: seg = 8'b00001001;
 		default: seg = 8'b11111111;
 	endcase
+end
+
+always @(posedge msec)
+begin
+	case (global_state_)
+		SET_TIME: begin 
+			if (startbtn) global_state_ = CLOCK_DOWN;
+		end
+		CLOCK_DOWN: begin
+			if (clock_zero) global_state_ = BEEP;
+		end
+		BEEP: begin
+			if (startbtn) global_state_ = SET_TIME;
+		end
+	endcase
+end
+
+always @(posedge msec)
+begin
+	if (global_state_ == SET_TIME) begin
+		
+	end
+end
+
+always @(posedge msec)
+begin
+	if (global_state_ == CLOCK_DOWN) begin
+	
+	end
+end
+
+always @(posedge msec)
+begin
+	if (global_state_ == BEEP) begin
+		buzz = ~buzz;
+	end
 end
 
 endmodule
