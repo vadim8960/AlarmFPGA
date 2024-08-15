@@ -6,7 +6,7 @@ module alarm (
     input upbtn,
     input dnbtn,
     input startbtn,
-	 input reset,
+    input reset,
 
     output reg buzz,
 
@@ -119,7 +119,6 @@ begin
     endcase
 end
 
-
 always @(posedge msec)
 begin
     case (global_state_)
@@ -129,7 +128,7 @@ begin
             if (!startbtn) 
                 global_state_ = CLOCK_DOWN;
 
-			change_val_ <= (!upbtn | !dnbtn);
+           change_val_ <= (!upbtn | !dnbtn);
             if (!upbtn) begin
                 positive_way_ <= 1;
             end else if (!dnbtn) begin
@@ -155,26 +154,5 @@ begin
         end
     endcase
 end
-
-//always @(posedge msec)
-//begin
-//    if (global_state_ == SET_TIME) begin
-//        
-//    end
-//end
-//
-//always @(posedge sec)
-//begin
-//    if (global_state_ == CLOCK_DOWN) begin
-//        
-//    end
-//end
-//
-//always @(posedge msec)
-//begin
-//    if (global_state_ == BEEP) begin
-//        
-//    end
-//end
 
 endmodule
