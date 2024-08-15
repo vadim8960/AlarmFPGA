@@ -1,2 +1,1 @@
-Warning (10268): Verilog HDL information at alarm.v(63): always construct contains both blocking and non-blocking assignments File: C:/progs/fpga/alarm/alarm.v Line: 63
-Warning (10268): Verilog HDL information at alarm.v(138): always construct contains both blocking and non-blocking assignments File: C:/progs/fpga/alarm/alarm.v Line: 138
+Warning (10268): Verilog HDL information at alarm.v(123): always construct contains both blocking and non-blocking assignments File: C:/progs/fpga/alarm/alarm.v Line: 123

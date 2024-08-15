@@ -6,6 +6,7 @@ module alarm (
     input upbtn,
     input dnbtn,
     input startbtn,
+	 input reset,
 
     output reg buzz,
 
@@ -63,37 +64,21 @@ end
 always @(posedge sec)
 begin
     if (change_val_) begin
-        led_debug <= positive_way_;
-        if (positive_way_) begin
-            val_ed_ = val_ed_ + 1'b1;	
-            if (val_ed_ == 10) begin
-                val_ed_ = 0;
-                val_des_ = val_des_ + 1'b1;
-            end
+            
+        val_ed_ =  val_ed_ + positive_way_ - !positive_way_;	
 
-            if (val_des_ == 10) begin
-                val_des_ = 0;
-                val_sot_ = val_sot_ + 1'b1;
-            end
+        if (val_ed_ == 10 || val_ed_ == 4'b1111) begin
+            val_ed_ = positive_way_ ? 0 : 9;
+            val_des_ =  val_des_ + positive_way_ - !positive_way_;
+        end
 
-            if (val_sot_ == 10) begin
-                val_sot_ = 0;
-            end
-        end else begin 
-            val_ed_ = val_ed_ - 1'b1;	
-            if (val_ed_ == 4'b1111) begin
-                val_ed_ = 9;
-                val_des_ = val_des_ - 1'b1;
-            end
+        if (val_des_ == 10 || val_des_ == 4'b1111) begin
+            val_des_ = positive_way_ ? 0 : 9;
+            val_sot_ = val_sot_ + positive_way_ - !positive_way_;
+        end
 
-            if (val_des_ == 4'b1111) begin
-                val_des_ = 9;
-                val_sot_ = val_sot_ - 1'b1;
-            end
-
-            if (val_sot_ == 4'b1111) begin
-                val_sot_ = 9;
-            end
+        if (val_sot_ == 10 || val_sot_ == 4'b1111) begin
+            val_sot_ = positive_way_ ? 0 : 9;
         end
     end
 end
@@ -139,34 +124,34 @@ always @(posedge msec)
 begin
     case (global_state_)
         SET_TIME: begin 
-            // if (startbtn) 
-            //     global_state_ = CLOCK_DOWN;
+            led_debug <= 1;
+            
+            if (!startbtn) 
+                global_state_ = CLOCK_DOWN;
+
 			change_val_ <= (!upbtn | !dnbtn);
             if (!upbtn) begin
                 positive_way_ <= 1;
             end else if (!dnbtn) begin
                 positive_way_ <= 0;
             end
-//				else if (dnbtn) begin
-//                change_val_ = 1;
-//                positive_way_ = 0;
-//                change_val_ = 0;
-//            end
 
         end
         CLOCK_DOWN: begin
-            // if (clock_zero) 
-            //     global_state_ = BEEP;
+            if (clock_zero) 
+                global_state_ = BEEP;
 					
-            change_val_ = sec;
-            // positive_way_ <= 0;
+            change_val_ <= 1;
+            positive_way_ <= 0;
 				
         end
         BEEP: begin
-            // if (startbtn) 
-            //     global_state_ = SET_TIME;
+            if (!reset) 
+                global_state_ = SET_TIME;
 				
-            // led_debug = ~led_debug;
+            led_debug <= 0;
+            change_val_ <= 0;
+            positive_way_ <= 0;
         end
     endcase
 end
