@@ -1,4 +1,0 @@
-Multicorner Timing Analysis: Summary
-Exploration Point,Setup,Hold,Recovery,Removal,Clock
-dse1_base,-7.297,0.178,No Data,No Data,clk
-dse1_base,-7.297,0.178,No Data,No Data,Worst-Case Slack

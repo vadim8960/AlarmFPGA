@@ -1,2 +1,6 @@
 
 /db/
+/.vscodes/
+/incremental_db/
+/dse/
+/.qsys_edit/
